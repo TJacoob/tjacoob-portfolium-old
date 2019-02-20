@@ -1,0 +1,173 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat;
+    color: white;
+    font-weight: 300;
+}
+
+a { text-decoration: none; color: inherit; cursor: inherit}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+.fw-3 { font-weight: 300;}
+.fw-5 { font-weight: 500;}
+.fw-7 { font-weight: 700;}
+
+
+.background{
+    margin:0;
+    padding:0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #1c1c1c;
+    overflow: hidden;
+}
+
+.foreground{
+    display: flex;
+    flex-direction: row;
+    background-color: #333333;
+    min-height: 88vh;
+    margin: 6vh 3vw;
+    align-items: stretch;
+    -webkit-box-shadow: -5px 5px 18px 0px rgba(0,0,0,0.6);
+    -moz-box-shadow: -5px 5px 18px 0px rgba(0,0,0,0.6);
+    box-shadow: -5px 5px 18px 0px rgba(0,0,0,0.6);
+    overflow-y: auto;
+}
+
+.menu {
+    padding: 0 4%;
+    align-self: center;
+    order: 0;
+    flex-basis: 34%;
+}
+
+#name-intro{
+    font-size: 26px;
+    line-height: 26px;
+}
+
+#name-base{
+    font-size: 64px;
+    line-height: 58px;
+    font-weight: 700;
+}
+
+#split{
+    border: none;
+    height: 2px;
+    margin: 3vh 0;
+    /* Set the hr color */
+    color: #ca3422; /* old IE */
+    background-color: #ca3422; /* Modern Browsers */
+}
+
+#subtext{
+    font-size: 18px ;
+    margin: 0;
+}
+
+.menu-item
+{
+    font-size: 16px;
+    line-height: 14px;
+}
+
+.content{
+    order: 1;
+    flex-basis: 66%;
+    background-image: url("img/01.JPG");
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    background-image: linear-gradient(rgba(21,21,21,0.5),rgba(21,21,21,0.95));
+    //background-color: rgba(21,21,21,0.75);
+    z-index: 2;
+    //padding: 2% 4%;
+    text-align: right;
+    overflow-y: auto;
+}
+
+.contentPadding{
+    padding: 4% 4%;
+    align-self: flex-end;
+    order: 0;
+    flex-basis: 100%;
+    scroll-y: auto;
+}
+
+.title{
+    text-align: right;
+    font-size: 24px;
+    margin: 2vh 0;
+}
+
+.description
+{
+    //text-align: justify;
+    font-size: 14px;
+    margin: 0;
+}
+
+#skills-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+#skills-left{
+    //padding: 4% 4%;
+    //align-self: flex-end;
+    order: 0;
+    flex-basis: 50%;
+}
+
+#skills-right{
+    //padding: 4% 4%;
+    //align-self: flex-end;
+    order: 1;
+    flex-basis: 50%;
+}
+
+.skill-shape-out{
+    margin: 1vh auto;
+    width: 60%;
+    height: 3vh;
+    background-color: #444444;
+    -webkit-box-shadow: -1px 1px 5px 0px rgba(28,28,28,1);
+    -moz-box-shadow: -1px 1px 5px 0px rgba(28,28,28,1);
+    box-shadow: -1px 1px 5px 0px rgba(28,28,28,1);
+}
+
+.skill-shape-in{
+    width: 60%;
+    height: 3vh;
+    background: rgb(148,23,8);
+    background: linear-gradient(90deg, rgba(148,23,8,1) 0%, rgba(224,71,52,1) 100%);
+}
+
+.contact{
+    font-size: 20px;
+}
+
+.mobile-navigation
+{
+    display: none;
+}
+
+#aboutMe{ text-align: justify; }
+#education{ text-align: right; }
+#previousWork { text-align: justify; }
+#getInTouch { text-align: right; }

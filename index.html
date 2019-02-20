@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tomás Jacob</title>
+    <meta name="Tomás Jacob" content="name">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="mobile.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+            crossorigin="anonymous">
+    </script>
+</head>
+<body onload="load()">
+    <div class="background">
+        <div class="foreground">
+            <div class="menu">
+                <span id="name-intro">Tomás</span>
+                <br>
+                <span id="name-base">Jacob</span>
+                <hr id="split">
+                <p id="subtext">Aspiring Web Developer</p>
+                <div style="padding: 4vh 0"></div>
+                <p class="menu-item" onClick="navigate('aboutMe')">01. About Me</p>
+                <p class="menu-item" onClick="navigate('education')">02. Education</p>
+                <p class="menu-item" onClick="navigate('skills')">03. Skills</p>
+                <p class="menu-item" onClick="navigate('previousWork')">04. Previous Work</p>
+                <p class="menu-item" onClick="navigate('getInTouch')">05. Get In Touch</p>
+            </div>
+            <div class="content">
+                <div class="overlay" id="aboutMe">
+                    <div class="contentPadding">
+                        <p class="title">About Me</p>
+                        <p class="description">
+                            Hello, my name is Tomás, but I go by my second name most of the time, so call me Jacob.
+                            I am currently finishing my MSc degree in <span class="fw-5">Information Systems and Computer Engineering</span>, with a
+                            major in Interaction and Visualization at Instituto Superior Técnico in Lisbon.
+                            <br>
+                            <br>
+                            I like to call myself an <span class="fw-5">Aspiring Web Developer</span> and hope to make a career out of designing
+                            websites and everything web related. So far I’ve done some freelancing work and other projects
+                            for my courses and extra curricular activities.
+                            <br>
+                            <br>
+                            As of now, I am 23 years old and live in Oeiras, on the outskirts of Lisbon. I am a huge fan
+                            of music and concerts, and we can talk about it over a beer or coffee. I am also passionate about
+                            traveling and I hope to be able to travel over the world.
+                        </p>
+                        <!-- Mobile Navigation Element -->
+                        <p class="mobile-navigation" onClick="goMenu()">
+                            <i class="fas fa-angle-left" style="margin-right: 0.5vw;"></i>
+                            Back to the Menu
+                        </p>
+                    </div>
+                </div>
+                <div class="overlay" id="education">
+                    <div class="contentPadding">
+                        <p class="title">Education</p>
+                        <p class="description">
+                            <span class="fw-5" style="font-size: 16px">MSc Degree in Information Systems and Computer Engineering</span>
+                            <br>
+                            <span class="fw-3">Instituto Superior Técnico - Universidade de Lisboa ( 2017 - now )</span>
+                            <br><br>
+                            <span class="fw-5" style="font-size: 16px">BSc Degree in Telecommunications and Informatics Engineering</span>
+                            <br>
+                            <span class="fw-3">Instituto Superior Técnico - Universidade de Lisboa ( 2013 - 2018 )</span>
+                        </p>
+                        <p class="title" style="font-size: 20px">Extra-Curricular Activities</p>
+                        <p class="description">
+                            <span class="fw-5" style="font-size: 16px">Students Group ( NEETI-IST )</span>
+                            <br>
+                            <span class="fw-3">President ( 2015 - 2017 )</span>
+                            <br>
+                            <span class="fw-3">Membership ( 2013 - 2019 )</span>
+                            <br><br>
+                            <span class="fw-5" style="font-size: 16px">Students Union ( AEIST )</span>
+                            <br>
+                            <span class="fw-3">Direction ( 2015 - 2016 )</span>
+                            <br>
+                            <span class="fw-3">Futsal Team ( 2017 - 2019 )</span>
+                            <br>
+                        </p>
+                        <!-- Mobile Navigation Element -->
+                        <p class="mobile-navigation" onClick="goMenu()">
+                            <i class="fas fa-angle-left" style="margin-right: 0.5vw;"></i>
+                            Back to the Menu
+                        </p>
+                    </div>
+                </div>
+                <div class="overlay" id="skills">
+                    <div class="contentPadding">
+                        <p class="title" style="text-align: center;">Skills</p>
+                        <div id="skills-container">
+                            <div id="skills-left">
+                                <span class="fw-5 line">Javascript
+                                    <span class="fw-3 line">( 8/10 )</span>
+                                </span>
+                                <div class="skill-shape-out">
+                                    <div class="skill-shape-in" style="width: 80%"></div>
+                                </div>
+                                <br>
+                                <span class="fw-5 line">Python
+                                    <span class="fw-3 line">( 6/10 )</span>
+                                </span>
+                                <div class="skill-shape-out">
+                                    <div class="skill-shape-in" style="width: 60%"></div>
+                                </div>
+                                <br>
+                                <span class="fw-5 line">Photoshop
+                                    <span class="fw-3 line">( 5/10 )</span>
+                                </span>
+                                <div class="skill-shape-out">
+                                    <div class="skill-shape-in" style="width: 50%"></div>
+                                </div>
+                            </div>
+                            <div id="skills-right">
+                                <span class="fw-5 line">HTML / CSS
+                                    <span class="fw-3 line">( 8/10 )</span>
+                                </span>
+                                <div class="skill-shape-out">
+                                    <div class="skill-shape-in" style="width: 80%"></div>
+                                </div>
+                                <br>
+                                <span class="fw-5 line">Java
+                                    <span class="fw-3 line">( 6/10 )</span>
+                                </span>
+                                <div class="skill-shape-out">
+                                    <div class="skill-shape-in" style="width: 60%"></div>
+                                </div>
+                                <br>
+                                <span class="fw-5 line">English
+                                    <span class="fw-3 line">( 9/10 )</span>
+                                </span>
+                                <div class="skill-shape-out">
+                                    <div class="skill-shape-in" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <p class="description" style="text-align: justify;">
+                            Over the years, through some extra curricular activities I gained some
+                            experience developing with some Full-Stack Javascript frameworks such as Meteor. I have also used Bootstrap
+                            with regularity in my projects. As a complement to my front-end experience I have created posters and videos
+                            using software like Adobe Photoshop and Sony Vegas.
+                        </p>
+                        <!-- Mobile Navigation Element -->
+                        <p class="mobile-navigation" onClick="goMenu()">
+                            <i class="fas fa-angle-left" style="margin-right: 0.5vw;"></i>
+                            Back to the Menu
+                        </p>
+                    </div>
+                </div>
+                <div class="overlay" id="previousWork">
+                    <div class="contentPadding">
+                        <p class="title">Previous Work</p>
+                        <p class="description">
+                            <span class="fw-5" style="font-size: 16px">Breaking Dev</span>
+                            <br>
+                            <span class="fw-3">
+                                BreakingDev is an Hackathon organized for the students of Lisbon's University.
+                                For the 2016 edition I designed the website for the event. For 2017 I developed a web application to manage
+                                sign ups and staff tasks. You can check these on Github or the 2018 edition website at: http://breakingdev.pt .
+                            </span>
+                            <br><br>
+                            <span class="fw-5" style="font-size: 16px;">NEETI-IST</span>
+                            <br>
+                            <span class="fw-3">
+                                NEETI-IST is a students group from my university which I presided for two years. For this duration I
+                                redesigned the website. This was one of my first projects and is based on a HTML5 Up template.
+                                You can check it out at http://neeti.tecnico.ulisboa.pt .
+                            </span>
+                            <br><br>
+                            <span class="fw-5" style="font-size: 16px;">FACS Watches</span>
+                            <br>
+                            <span class="fw-3">
+                                FACS Watches was a freelancing project for a singular client looking for a way to showcase his unique watches
+                                and personal collection. The website has a CMS to allow the client to manage all the singular items without
+                                my interference. The design is my own with input from the client. The website is no longer online, but the Github
+                                repository is available at:
+                            </span>
+                        </p>
+                        <!-- Mobile Navigation Element -->
+                        <p class="mobile-navigation" onClick="goMenu()">
+                            <i class="fas fa-angle-left" style="margin-right: 0.5vw;"></i>
+                            Back to the Menu
+                        </p>
+                    </div>
+                </div>
+                <div class="overlay" id="getInTouch">
+                    <div class="contentPadding">
+                        <p style="font-size: 24px;margin: 2vh 0">Get In Touch</p>
+                        <p >
+                            If you enjoyed my work and want to know me a little better, or perhaps, make a work proposal,
+                            you can use any of the options below.
+                        </p>
+                        <p class="contact">
+                            <a href="mailto:tjacobmartins@gmail.com">tjacobmartins@gmail.com</a>
+                            <i class="far fa-envelope fa-lg fa-fw" style="margin-left: 0.5vw;"></i>
+                        </p>
+                        <p class="contact">
+                            (+351) 918 189 575
+                            <i class="fas fa-mobile-alt fa-lg fa-fw" style="margin-left: 0.5vw;"></i>
+                        </p>
+                        <p class="contact">
+                            <a href="https://github.com/TJacoob">TJacoob</a>
+                            <i class="fab fa-github fa-lg fa-fw" style="margin-left: 0.5vw;"></i>
+                        </p>
+                        <p class="contact">
+                            <a href="https://www.linkedin.com/in/tjacoob/">/in/tjacoob/</a>
+                            <i class="fab fa-linkedin-in fa-lg fa-fw" style="margin-left: 0.5vw;"></i>
+                        </p>
+                        <!-- Mobile Navigation Element -->
+                        <p class="mobile-navigation" onClick="goMenu()">
+                            <i class="fas fa-angle-left" style="margin-right: 0.5vw;"></i>
+                            Back to the Menu
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="base.js"></script>
+</html>

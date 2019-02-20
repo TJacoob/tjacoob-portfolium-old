@@ -1,0 +1,50 @@
+@media only screen and (max-width: 768.01px) {
+
+    .foreground{
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .menu {
+        padding: 0 10%;
+        flex-basis: 100%;
+    }
+
+    .content {
+        flex-basis: 100%;
+    }
+
+    .contentPadding{
+        padding: 2vh 10%;
+        align-self: center;
+        scroll-y: auto;
+    }
+
+    .mobile-navigation
+    {
+        display: block;
+        text-align: left;
+        margin-top: 4vh;
+    }
+
+    .title{ text-align: left; }
+    #education{ text-align: left; }
+    #getInTouch { text-align: justify; }
+
+    .skill-shape-out{
+        margin: 1vh 10%;
+        width: 80%;
+    }
+
+    .skill-shape-in{
+        width: 80%;
+    }
+
+    .line{ display: inline-block }
+
+    .contact{
+        font-size: 16px;
+        text-align: right;
+    }
+
+}
