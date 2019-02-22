@@ -62,8 +62,8 @@ a:active { text-decoration: none; }
     height: 2px;
     margin: 3vh 0;
     /* Set the hr color */
-    color: #ca3422; /* old IE */
-    background-color: #ca3422; /* Modern Browsers */
+    color: #f0ad00; /* old IE */
+    background-color: #f0ad00; /* Modern Browsers */
 }
 
 #subtext{
@@ -73,8 +73,21 @@ a:active { text-decoration: none; }
 
 .menu-item
 {
+    font-weight: 500;
+    min-width: 50%;
     font-size: 16px;
     line-height: 14px;
+    margin: 2% 0;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #333333;
+}
+
+.menu-selected
+{
+    font-weight: 500;
+    color: #f0ad00 !important;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #f0ad00;
 }
 
 .content{
@@ -112,6 +125,8 @@ a:active { text-decoration: none; }
     text-align: right;
     font-size: 24px;
     margin: 2vh 0;
+    color: #f0ad00;
+    text-shadow: 2px 2px 8px #1c1c1c;
 }
 
 .description
@@ -154,12 +169,14 @@ a:active { text-decoration: none; }
 .skill-shape-in{
     width: 60%;
     height: 3vh;
-    background: rgb(148,23,8);
-    background: linear-gradient(90deg, rgba(148,23,8,1) 0%, rgba(224,71,52,1) 100%);
+    background: rgb(240,173,0);
+    background: linear-gradient(90deg, rgba(240,173,0,1) 0%, rgba(255,214,107,1) 100%);
 }
 
 .contact{
     font-size: 20px;
+    margin: 1% 0;
+    line-height: 30px;
 }
 
 .mobile-navigation

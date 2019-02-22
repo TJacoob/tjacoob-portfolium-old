@@ -14,10 +14,16 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="mobile.css" type="text/css">
+    <link rel="stylesheet" href="effects.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script
-            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+    <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous">
     </script>
 </head>
@@ -31,11 +37,15 @@
                 <hr id="split">
                 <p id="subtext">Aspiring Web Developer</p>
                 <div style="padding: 4vh 0"></div>
-                <p class="menu-item" onClick="navigate('aboutMe')">01. About Me</p>
-                <p class="menu-item" onClick="navigate('education')">02. Education</p>
-                <p class="menu-item" onClick="navigate('skills')">03. Skills</p>
-                <p class="menu-item" onClick="navigate('previousWork')">04. Previous Work</p>
-                <p class="menu-item" onClick="navigate('getInTouch')">05. Get In Touch</p>
+                <span class="menu-item hvr-fade" onClick="navigate('aboutMe', this)">01. About Me</span>
+                <br>
+                <span class="menu-item hvr-fade" onClick="navigate('education', this)">02. Education</span>
+                <br>
+                <span class="menu-item hvr-fade" onClick="navigate('skills', this)">03. Skills</span>
+                <br>
+                <span class="menu-item hvr-fade" onClick="navigate('previousWork', this)">04. Previous Work</span>
+                <br>
+                <span class="menu-item hvr-fade" onClick="navigate('getInTouch', this)">05. Get In Touch</span>
             </div>
             <div class="content">
                 <div class="overlay" id="aboutMe">
@@ -198,27 +208,31 @@
                 </div>
                 <div class="overlay" id="getInTouch">
                     <div class="contentPadding">
-                        <p style="font-size: 24px;margin: 2vh 0">Get In Touch</p>
+                        <p class="title">Get In Touch</p>
                         <p >
                             If you enjoyed my work and want to know me a little better, or perhaps, make a work proposal,
                             you can use any of the options below.
                         </p>
-                        <p class="contact">
+                        <p class="contact hvr-fade">
                             <a href="mailto:tjacobmartins@gmail.com">tjacobmartins@gmail.com</a>
                             <i class="far fa-envelope fa-lg fa-fw" style="margin-left: 0.5vw;"></i>
                         </p>
-                        <p class="contact">
-                            (+351) 918 189 575
+                        <br>
+                        <p class="contact hvr-fade">
+                            <a href="tel:+351918189575">(+351) 918 189 575</a>
                             <i class="fas fa-mobile-alt fa-lg fa-fw" style="margin-left: 0.5vw;"></i>
                         </p>
-                        <p class="contact">
-                            <a href="https://github.com/TJacoob">TJacoob</a>
+                        <br>
+                        <p class="contact hvr-fade">
+                            <a href="https://github.com/TJacoob" target="_blank">TJacoob</a>
                             <i class="fab fa-github fa-lg fa-fw" style="margin-left: 0.5vw;"></i>
                         </p>
-                        <p class="contact">
-                            <a href="https://www.linkedin.com/in/tjacoob/">/in/tjacoob/</a>
+                        <br>
+                        <p class="contact hvr-fade">
+                            <a href="https://www.linkedin.com/in/tjacoob/" target="_blank">/in/tjacoob/</a>
                             <i class="fab fa-linkedin-in fa-lg fa-fw" style="margin-left: 0.5vw;"></i>
                         </p>
+                        <br>
                         <!-- Mobile Navigation Element -->
                         <p class="mobile-navigation" onClick="goMenu()">
                             <i class="fas fa-angle-left" style="margin-right: 0.5vw;"></i>

@@ -14,10 +14,11 @@ function load(){
 
 function clear() {
     $('.overlay').hide();
+    $('.menu-item').removeClass('menu-selected');
     //document.getElementById('overlay').style.display = 'none';
 }
 
-function navigate(opt) {
+function navigate(opt, element) {
     if ( ismobile() )
     {
         $('.menu').hide();
@@ -29,6 +30,9 @@ function navigate(opt) {
 
     }
     clear();
+    $(element).addClass("menu-selected", 200);
+    //console.log($(this)[);
+    //$(this).addClass("test");
     $('#'+opt).css('display','flex');
 }
 
@@ -67,6 +71,7 @@ function getInTouch() {
 
 function goMenu() { // Always Mobile
     $('.content').hide();
+    clear();
     $('.menu').show();
 }
 
