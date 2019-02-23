@@ -1,5 +1,10 @@
 var content ;
 
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('callback - particles.js config loaded');
+});
+
 function load(){
     if ( ismobile() )
     {
@@ -23,9 +28,10 @@ function clear() {
 function navigate(opt, element) {
     if ( ismobile() )
     {
-        $('.menu').hide();
-        $('.content').show();
-        $('.title').scrollTop($(window).height() * 0.96);
+        $('.menu').fadeOut(200,function () {
+            $('.content').fadeIn(200);
+            $('.title').scrollTop($(window).height() * 0.96);
+        });
     }
     else
     {
@@ -38,17 +44,54 @@ function navigate(opt, element) {
 
     if ( content != undefined )
         $('#'+content).fadeOut(200, function () {
-            $('#'+opt).fadeIn(400);
+
+            if ( ismobile() ){
+                $('.content').css({'background-image': 'url(img/'+opt+'.jpg)'})
+                    .animate({opacity: 1},400, function(){
+                        $('#'+opt).fadeIn(400);
+                    });
+            }
+            else
+            {
+                //$('.content').css("background-image", "url(img/"+opt+".jpg)");
+                $(".content").stop().animate({opacity: 0},200,function(){
+                    $('.content').css({'background-image': 'url(img/'+opt+'.jpg)'})
+                        .animate({opacity: 1},400, function(){
+                            $('#'+opt).fadeIn(400);
+                        });
+                });
+            }
         });
     else
-        $('#'+opt).fadeIn(400);
+    {
+        if ( ismobile() ){
+            $('.content').css({'background-image': 'url(img/'+opt+'.jpg)'})
+                .animate({opacity: 1},400, function(){
+                    $('#'+opt).fadeIn(400);
+                });
+        }
+        else
+        {
+            //$('.content').css("background-image", "url(img/"+opt+".jpg)");
+            $(".content").stop().animate({opacity: 0},200,function(){
+                $('.content').css({'background-image': 'url(img/'+opt+'.jpg)'})
+                    .animate({opacity: 1},400, function(){
+                        $('#'+opt).fadeIn(400);
+                    });
+            });
+        }
+    }
     content = opt;
 }
 
 function goMenu() { // Always Mobile
-    $('.content').hide();
-    clear();
-    $('.menu').show();
+
+    $('.content').fadeOut(200, function () {
+        clear();
+        $('.menu').fadeIn(200);
+    });
+
+
 }
 
 function ismobile() {

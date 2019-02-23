@@ -30,3 +30,27 @@
 .hvr-links:hover, .hvr-links:focus, .hvr-links:active {
     color: #f0ad00;
 }
+
+/*
+#particles-js canvas {
+    position: fixed;
+    top:0;
+    left:0;
+    margin: 6vh 3vw;
+    display: block;
+    vertical-align: bottom;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+*/
+
+#particles-js {
+    position: absolute;
+    width: 100vw;
+    height: 150vh;
+
+}

@@ -27,6 +27,7 @@ a:active { text-decoration: none; }
 }
 
 .foreground{
+    position: relative;
     display: flex;
     flex-direction: row;
     background-color: #333333;
@@ -36,7 +37,7 @@ a:active { text-decoration: none; }
     -webkit-box-shadow: -5px 5px 18px 0px rgba(0,0,0,0.6);
     -moz-box-shadow: -5px 5px 18px 0px rgba(0,0,0,0.6);
     box-shadow: -5px 5px 18px 0px rgba(0,0,0,0.6);
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .menu {
@@ -93,7 +94,7 @@ a:active { text-decoration: none; }
 .content{
     order: 1;
     flex-basis: 66%;
-    background-image: url("img/01.JPG");
+    background-image: url("img/0.jpg");
     background-size: cover;
     position: relative;
     z-index: 1;
