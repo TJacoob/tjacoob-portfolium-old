@@ -16,3 +16,17 @@
     //background-color: #2098D1;
     color: #f0ad00;
 }
+
+/* Fade */
+.hvr-links {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-property: color;
+    transition-property: color;
+    cursor: pointer;
+}
+.hvr-links:hover, .hvr-links:focus, .hvr-links:active {
+    color: #f0ad00;
+}

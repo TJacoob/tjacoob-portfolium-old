@@ -1,3 +1,5 @@
+var content ;
+
 function load(){
     if ( ismobile() )
     {
@@ -29,44 +31,18 @@ function navigate(opt, element) {
     {
 
     }
-    clear();
+
+    $('.menu-item').removeClass('menu-selected');
     $(element).addClass("menu-selected", 200);
-    //console.log($(this)[);
-    //$(this).addClass("test");
-    $('#'+opt).css('display','flex');
-}
+    //$('#'+opt).css('display','flex');
 
-function aboutMe() {
-    if ( ismobile() )
-    {
-        $('.menu').hide();
-        $('.content').show();
-    }
+    if ( content != undefined )
+        $('#'+content).fadeOut(200, function () {
+            $('#'+opt).fadeIn(400);
+        });
     else
-    {
-        clear();
-        $('#aboutMe').css('display','flex');
-    }
-}
-
-function education() {
-    clear();
-    $('#education').css('display','flex');
-}
-
-function skills() {
-    clear();
-    $('#skills').css('display','flex');
-}
-
-function previousWork() {
-    clear();
-    $('#previousWork').css('display','flex');
-}
-
-function getInTouch() {
-    clear();
-    $('#getInTouch').css('display','flex');
+        $('#'+opt).fadeIn(400);
+    content = opt;
 }
 
 function goMenu() { // Always Mobile
